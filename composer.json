@@ -1,7 +1,10 @@
 {
-    "name": "spatie/laravel-server-side-rendering",
+    "name": "defr/pyrocms-server-side-rendering",
     "description": "Server side rendering JavaScript in your Laravel application",
+    "type": "streams-addon",
     "keywords": [
+        "pyrocms",
+        "streams-platform",
         "spatie",
         "ssr",
         "laravel-server-side-rendering"
@@ -13,6 +16,11 @@
             "name": "Sebastian De Deyne",
             "email": "sebastian@spatie.be",
             "homepage": "https://spatie.be",
+            "role": "Developer"
+        },
+        {
+            "name": "Denis Efremov",
+            "email": "efremov.a.denis@gmail.com",
             "role": "Developer"
         }
     ],
@@ -27,15 +35,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Ssr\\": "src"
-        },
-        "files": [
-            "src/helpers.php"
-        ]
+            "Defr\\SsrExtension\\": "src"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Ssr\\Tests\\": "tests"
+            "Defr\\SsrExtension\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,15 +49,5 @@
     },
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Spatie\\Ssr\\SsrServiceProvider"
-            ],
-            "aliases": {
-                "Ssr": "Spatie\\Ssr\\Facades\\Ssr"
-            }
-        }
     }
 }

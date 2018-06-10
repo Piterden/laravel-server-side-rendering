@@ -1,14 +1,20 @@
-<?php
-
-namespace Spatie\Ssr;
+<?php namespace Defr\SsrExtension;
 
 use Spatie\Ssr\Engines\V8;
 use Spatie\Ssr\Engines\Node;
 use Spatie\Ssr\Resolvers\MixResolver;
-use Illuminate\Support\ServiceProvider;
+use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
 
-class SsrServiceProvider extends ServiceProvider
+/**
+ * Class SsrExtensionServiceProvider
+ *
+ * @link   http://pyrocms.com/
+ * @author PyroCMS, Inc. <support@pyrocms.com>
+ * @author Denis Efremov <efremov.a.denis@gmail.com>
+ */
+class SsrExtensionServiceProvider extends AddonServiceProvider
 {
+
     /**
      * Bootstrap the application services.
      */
@@ -57,13 +63,4 @@ class SsrServiceProvider extends ServiceProvider
         $this->app->alias(Renderer::class, 'ssr');
     }
 
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return string[]
-     */
-    public function provides()
-    {
-        return ['ssr'];
-    }
 }
